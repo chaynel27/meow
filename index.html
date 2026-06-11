@@ -10,7 +10,7 @@
     }
 
     h1 {
-      color: #38bdf8;
+      color: #20B2AA;
     }
 
     button {
@@ -18,7 +18,25 @@
       border: none;
       padding: 10px 20px;
       font-size: 16px;
-      cursor: pointer;
+      cursor: none;
+  }
+
+  #cursor {
+    position: fixed;
+    pointer-events: none;
+    font-size: 24px;
+  }
+</style>
+
+<div id="cursor">🌸</div>
+
+<script>
+  document.addEventListener("mousemove", (e) => {
+    const cursor = document.getElementById("cursor");
+    cursor.style.left = e.pageX + "px";
+    cursor.style.top = e.pageY + "px";
+  });
+</script>
       border-radius: 8px;
     }
 
