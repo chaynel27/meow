@@ -6,11 +6,19 @@
       background-color: #E6E6FA;
       color: #ADD8E6;
       font-family: times-new-roman;
+      cursor: none;
       text-align: center;
     }
 
     h1 {
-      color: #20B2AA;
+      color: #38bdf8;
+    }
+
+    cursor {
+      position: fixed;
+      pointer-events: none;
+      font-size: 28px;
+      transform: translate (-50%, -50%);
     }
 
     button {
@@ -18,8 +26,8 @@
       border: none;
       padding: 10px 20px;
       font-size: 16px;
-      cursor: none;
-        border-radius: 8px;
+      cursor: pointer;
+      border-radius: 8px;
     }
 
     button:hover {
@@ -31,25 +39,6 @@
       font-size: 18px;
     }
   </style>
-  }
-
-  #cursor {
-    position: fixed;
-    pointer-events: none;
-    font-size: 24px;
-  }
-</style>
-
-<div id="cursor">🌸</div>
-
-<script>
-  document.addEventListener("mousemove", (e) => {
-    const cursor = document.getElementById("cursor");
-    cursor.style.left = e.pageX + "px";
-    cursor.style.top = e.pageY + "px";
-  });
-
-    
 </head>
 
 <body>
@@ -58,6 +47,8 @@
   <button onclick="changeText()">Click me</button>
 
   <p id="text">click to meow</p>
+
+  <div id="cursor">🌸</div>
 
   <script>
     function changeText() {
